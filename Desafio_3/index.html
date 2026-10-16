@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta+ | Central de Serviços</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Conecta<span>+</span></h1>
+            <p>Central de Serviços</p>
+        </div>
+        <nav>
+            <button id="btn-nav-catalogo" class="btn-nav ativo" onclick="mudarAba('catalogo')">Catálogo de Serviços</button>
+            <button id="btn-nav-solicitacao" class="btn-nav" onclick="mudarAba('solicitacao')">Nova Solicitação</button>
+            <button id="btn-nav-painel" class="btn-nav" onclick="mudarAba('painel')">Painel de Acompanhamento</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="aba-catalogo" class="aba">
+            <div class="cabecalho-secao">
+                <h2>Catálogo de Serviços</h2>
+                <p>Encontre o serviço que você precisa e abra um chamado em poucos cliques.</p>
+            </div>
+
+            <div class="filtros">
+                <input type="text" id="busca-catalogo" placeholder="Buscar por serviço ou palavra-chave..." oninput="filtrarCatalogo()">
+                <select id="filtro-categoria" onchange="filtrarCatalogo()">
+                    <option value="todas">Todas as Categorias</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="RH">RH</option>
+                    <option value="Infraestrutura">Infraestrutura</option>
+                </select>
+            </div>
+
+            <div id="grid-catalogo" class="grid-cards"></div>
+        </section>
+
+        <section id="aba-solicitacao" class="aba escondido">
+            <div class="cabecalho-secao">
+                <h2>Nova Solicitação</h2>
+                <p>Preencha os dados abaixo para registrar seu chamado na plataforma.</p>
+            </div>
+
+            <form id="form-solicitacao" onsubmit="criarSolicitacao(event)">
+                <div class="campo">
+                    <label for="select-servico">Serviço desejado</label>
+                    <select id="select-servico" required>
+                        <option value="">Selecione um serviço...</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="input-solicitante">Seu Nome</label>
+                    <input type="text" id="input-solicitante" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="txt-descricao">Descrição do pedido</label>
+                    <textarea id="txt-descricao" rows="4" placeholder="Detalhe o que você precisa..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-principal">Enviar Solicitação</button>
+            </form>
+        </section>
+
+        <section id="aba-painel" class="aba escondido">
+            <div class="cabecalho-secao">
+                <h2>Painel de Acompanhamento</h2>
+                <p>Consulte o andamento das solicitações registradas.</p>
+            </div>
+
+            <div class="filtros">
+                <select id="filtro-status" onchange="renderizarPainel()">
+                    <option value="todos">Todos os Status</option>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Em Andamento">Em Andamento</option>
+                    <option value="Concluído">Concluído</option>
+                </select>
+            </div>
+
+            <p id="msg-vazia" class="mensagem-alerta escondido">Nenhuma solicitação encontrada.</p>
+            <div id="lista-painel" class="lista-chamados"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Conecta+ - Central Integrada de Serviços</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

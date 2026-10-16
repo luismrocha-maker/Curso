@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Estudos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <p class="marca">MEUS ESTUDOS</p>
+        <h1>Vamos colocar os estudos em dia?</h1>
+        <p>Adicione suas tarefas e acompanhe o que falta fazer.</p>
+    </header>
+
+    <main>
+        <section class="contagem">
+            <div>
+                <span>Total</span>
+                <p id="total">0</p>
+            </div>
+
+            <div>
+                <span>Feitas</span>
+                <p id="concluidas">0</p>
+            </div>
+
+            <div>
+                <span>Faltando</span>
+                <p id="pendentes">0</p>
+            </div>
+        </section>
+
+        <section class="adicionar">
+            <h2>Adicionar uma tarefa</h2>
+
+            <form id="formTarefa">
+                <label for="disciplina">Matéria</label>
+                <input type="text" id="disciplina" placeholder="Ex: História" required>
+
+                <label for="descricao">O que você precisa fazer?</label>
+                <textarea id="descricao" placeholder="Ex: Estudar para a prova" required></textarea>
+
+                <label for="prioridade">Prioridade</label>
+                <select id="prioridade">
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média" selected>Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section class="minhas-tarefas">
+            <h2>Minha lista</h2>
+            <p id="mensagem">Você ainda não adicionou nenhuma tarefa.</p>
+            <div id="listaTarefas"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Um passo de cada vez.</p>
+    </footer>
+
+</body>
+</html>

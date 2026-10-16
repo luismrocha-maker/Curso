@@ -1,0 +1,214 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0b0b15;
+    color: #e5e1f2;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 45px 9% 35px;
+    background: #111127;
+    border-bottom: 2px solid #603a9b;
+}
+
+.marca {
+    color: #a88aff;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+header h1 {
+    color: #d2c1ff;
+    max-width: 550px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+header p:last-child {
+    color: #aaa6c3;
+}
+
+main {
+    max-width: 950px;
+    width: 88%;
+    margin: 35px auto;
+}
+
+.contagem {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.contagem div {
+    background: #17172d;
+    padding: 15px 22px;
+    flex: 1;
+    min-width: 120px;
+    border-radius: 5px 16px 5px 16px;
+    border-bottom: 2px solid #7544b8;
+}
+
+.contagem span {
+    color: #aaa6c3;
+    font-size: 14px;
+}
+
+.contagem p {
+    color: #c7adff;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #c7adff;
+    margin-bottom: 18px;
+}
+
+.adicionar {
+    background: #141426;
+    padding: 28px;
+    border-radius: 6px 24px 6px 24px;
+    margin-bottom: 45px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 6px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 11px;
+    color: white;
+    background: #0c0c19;
+    border: 1px solid #383052;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 1px solid #9665e5;
+}
+
+button {
+    background: #6940a8;
+    color: white;
+    border: 0;
+    padding: 11px 20px;
+    border-radius: 5px 12px 5px 12px;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+button:hover {
+    background: #865bc5;
+}
+
+.minhas-tarefas {
+    margin-bottom: 45px;
+}
+
+#mensagem {
+    color: #9994b4;
+    margin-bottom: 15px;
+}
+
+.tarefa {
+    background: #151529;
+    padding: 20px;
+    border-left: 3px solid #7145b3;
+    border-radius: 4px 15px 4px 15px;
+    margin: 18px 0;
+}
+
+.tarefa h3 {
+    color: #c7adff;
+    margin-bottom: 8px;
+}
+
+.tarefa p {
+    overflow-wrap: anywhere;
+}
+
+.tarefa .prioridade {
+    color: #a9a1c8;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.tarefa.concluida {
+    border-left-color: #63b99a;
+    opacity: 0.7;
+}
+
+.tarefa.concluida h3 {
+    color: #8dd8b8;
+    text-decoration: line-through;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.botoes button {
+    margin-top: 14px;
+}
+
+.botoes .excluir {
+    background: #85364e;
+}
+
+.botoes .excluir:hover {
+    background: #a64763;
+}
+
+footer {
+    padding: 25px 9%;
+    color: #9994b4;
+    background: #111127;
+    border-top: 1px solid #302044;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 30px 6%;
+    }
+
+    main {
+        width: 90%;
+        margin-top: 25px;
+    }
+
+    .contagem div {
+        min-width: 100%;
+    }
+
+    .adicionar {
+        padding: 20px;
+    }
+
+    .botoes button {
+        flex: 1;
+    }
+}

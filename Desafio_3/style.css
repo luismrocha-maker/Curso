@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 span {
+    color: #3498db;
+}
+
+header p {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-nav {
+    padding: 8px 15px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-nav.ativo, .btn-nav:hover {
+    background-color: #3498db;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.cabecalho-secao {
+    margin-bottom: 20px;
+}
+
+.escondido {
+    display: none !important;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filtros input, .filtros select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.grid-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-servico, .card-chamado, #form-solicitacao {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.badge-categoria {
+    background-color: #e0e0e0;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.card-servico h3 {
+    margin: 10px 0 5px 0;
+}
+
+.card-servico p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-principal, .btn-secundario {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn-principal {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-secundario {
+    background-color: #3498db;
+    color: white;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input, .campo select, .campo textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.lista-chamados {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.topo-chamado {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.protocolo {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.data {
+    color: #888;
+}
+
+.rodape-chamado {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
