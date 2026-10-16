@@ -1,4 +1,4 @@
-# Conecta+ - Central de Serviços
+# Conecta+ - Central de Serviços (DESAFIO 3)
 
 O Conecta+ é uma aplicação web feita para organizar e acompanhar solicitações de serviços internos, como suporte de TI, RH e manutenção de infraestrutura. O projeto foi desenvolvido do zero utilizando apenas HTML, CSS e JavaScript puro (sem bibliotecas ou frameworks externos), integrando os conceitos aprendidos ao longo do curso.
 
